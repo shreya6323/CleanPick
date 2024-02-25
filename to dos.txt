@@ -1,0 +1,46 @@
+error showing on ui
+explain your rating scale
+social icons not working on hoveing
+remove the system.out.println
+give individual packages
+
+get check ur code by hbp
+need to work on cleanpick score alogrithm
+
+
+also test what crazy user can do
+
+work on responsiveness
+
+check for bad ingredients
+
+add about us what ur app is doing how it is doing and all
+
+add some navlinks
+
+add view full ingredientslist
+
+
+check the functionality
+check ur code is following proper rules
+
+need to do improve react coding styles
+also add resusabliity in react components
+
+
+can add dropdown in view full list
+
+give some another name to show and hide ingredients 
+do we need to sort the ingredients ?
+
+scrolling threshold will vary for diff screens 
+
+further you can google sarch the ingredients
+ 
+change the color combn of product scores 
+
+make your ui proper by changing buttons and also the outline of searchbar and so on ...
+
+need to change hibernate.cfg.xml data
+
+why do we need to provide mapping in hibernatecfgxml

@@ -1,0 +1,67 @@
+font-family: 'Nunito', sans-serif;
+
+regular 400
+
+either barcode
+either name of product
+either text area where user can write ingredients
+either mobile img to text or google image to text
+add solr here so that you can fetch similar data from webscrapping based on scoring 
+
+make drag and drop and also add dotted box in ui 
+change the documents after you have build ur project 
+
+
+cropped iages or give user the option to crop
+
+try to match the result using some algo
+
+convert newline to space
+
+convert ! to l
+
+need to add condition if there are 90% match then accept the score 
+clean pick :
+
+
+choose light color for this
+
+functionality
+
+user will put image and then the text will be extracted and through webscrapping you will get info about the ingredients score and you will display a overall score 
+
+u can also add food
+
+u can also surf more on that ingredient
+u can add that product rating in ur database
+
+
+for getting overall score u can total it and divide with 10* no of ingredients found 
+
+
+clean pallete pure insight decoder stuff clean-compass
+
+cleanpallete
+insight
+cleanstuff
+
+
+
+
+user can search through ingredient name or can give ingredient list 
+
+then he can store the product name with score he got in his account
+
+
+
+search based on product name
+
+filtering out based on ingredients or product_score
+
+ one to many mapping 
+
+crud operations:
+create product 
+delete product
+update product name
+read product means you can view product_card by searching or filtering

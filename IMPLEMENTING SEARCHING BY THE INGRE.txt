@@ -1,0 +1,17 @@
+IMPLEMENTING SEARCHING BY THE INGREDIENT NAME AS WELL 
+sorting by the name as well as by the overall score
+
+check the behaviour of searching and sorting at the time of empty field
+ 
+check in all cases 
+
+use methods provided by repo
+remove unnnecessay things from ur code
+
+ String.CASE_INSENSITIVE_ORDER  use this to get optimised results 
+
+for applying the results of search u need to press search
+agar koi user pehla sort karse then he or she will not get result by the search term
+
+Establish communication between sort and search field check all 6 possibility !!!....
+

@@ -1,0 +1,27 @@
+need to apply notification and error message everywhere !
+
+
+
+codingstyle
+functionality
+ui 
+
+
+contact icon issue
+
+fsd ma badha topic cover thava joiye
+improve ui 
+inconsistency between ui
+
+make extension
+refer quillbot for ui 
+
+change the loader or change the ui to match
+
+check if this is correct or not ?
+   {expanded && ingredientScores && Object.entries(ingredientScores).map(([ingredient, score]) => (
+    <div key={ingredient} className="ingredient-card">
+        <div className="ingredient-info">
+            <strong>{ingredient}:</strong> 
+            <ScoreCircle score={score} color={getColorForScore(score)} className={"small"} />
+        </div>

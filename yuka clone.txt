@@ -1,0 +1,15 @@
+yuka clone
+
+cosmetics 
+good bad ingredients
+
+
+food
+
+nutritional value and good bad ingredients
+
+where i will get the good bad
+where to store that api or db 
+do i need any model for it
+
+ewg skin deep and ewg also have food info i guess food scores

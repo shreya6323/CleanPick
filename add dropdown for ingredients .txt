@@ -1,0 +1,10 @@
+add dropdown for ingredients 
+
+make you delete modal as grey
+
+check your notification messages content 
+
+add login signup and then connect products accordingly ....
+
+
+now if you get time then apply search sorting and filtering functionality also 

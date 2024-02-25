@@ -1,0 +1,27 @@
+https://www.ewg.org/skindeep/search/?search=SODIUM+HYDROXIDE
+check for multiple images to improve performance 
+
+
+ smart guesss
+
+1,2-hexanediol
+dex-trin giving error
+
+visibility  large diff
+1 character difference 
+peg-150
+peg 150
+()
+chemical not available
+
+https://www.ewg.org/skindeep/search/?search=MALTOOLIGOSYl+GLUCOSIDE
+--------------------------------------------------------------------------------
+
+check for all cases and if you find than take the max score of all of them 
+a or b
+a
+b
+
+a(b)
+a
+b
