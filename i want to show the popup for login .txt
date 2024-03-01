@@ -1,0 +1,10 @@
+i want to show the popup for login and registration 
+i dont want the whole object of user to get stored in the product 
+session
+product list option should appear only when someone is logged in 
+and user related products should be visible only(one to many products ...)
+show error if username is already taken
+login register
+i want that no 2 products should get the same name
+if u are not signed or logged in then save option should be disable or it should take u to login page and then to the saved successful message
+need to encode the token that is send by sender and receier 

@@ -86,7 +86,7 @@ public class WebScrapingController {
         this.scraper = scraper;
     }
 
-    @RequestMapping("/performWebScraping")
+    @RequestMapping("/api/performWebScraping")
     public ResponseEntity<GeneralProduct> performWebScraping(@RequestParam("image") MultipartFile imageFile) {
         try {
            

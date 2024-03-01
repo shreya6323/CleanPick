@@ -22,6 +22,57 @@ public class ProductInfoService {
     public List<ProductInfo> getAllProducts() {
         return productInfoRepository.findAll();
     }
+
+    
+    public List<ProductInfo> getProductsByUser(String id) {
+        return productInfoRepository.findByUserId(id);
+    }
+
+    public List<ProductInfo> searchProductsSortedByNameAndUserAsc(String searchTerm, String userId) {
+        List<ProductInfo> productInfos = searchProductsByUserAndName(userId,searchTerm);
+          return productInfos.stream()
+           .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER))
+                   .collect(Collectors.toList());
+      
+    }
+
+    // Method to get products sorted by score and user ID
+    public List<ProductInfo> searchProductsSortedByScoreAndUserDes(String searchTerm, String userId) {
+        System.out.println("i am in search by score descending order!");
+
+        List<ProductInfo> allProducts = searchProductsByUserAndName(userId,searchTerm);
+        return allProducts.stream()
+        .sorted(Comparator.comparing(ProductInfo::getOverallScore).reversed())
+        .collect(Collectors.toList());
+    }
+
+    // Method to search all products sorted by score ascending and user ID
+    public List<ProductInfo> searchProductsSortedByScoreAndUserAsc(String searchTerm, String userId) {
+        // Implement your logic to search all products sorted by score ascending and user ID
+        // Example:
+        System.out.println("i am in search by score ascending order!");
+        List<ProductInfo> allProducts = searchProductsByUserAndName(userId,searchTerm);
+        return allProducts.stream()
+        .sorted(Comparator.comparing(ProductInfo::getOverallScore))
+        .collect(Collectors.toList());
+    }
+
+    
+    // Method to search all products sorted by name descending and user ID
+    public List<ProductInfo> searchProductsSortedByNameAndUserDes(String searchTerm, String userId) {
+        // Implement your logic to search all products sorted by name descending and user ID
+        // Example:
+        List<ProductInfo> productInfos = searchProductsByUserAndName(userId,searchTerm);
+        return productInfos.stream()
+         .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER).reversed())
+                 .collect(Collectors.toList());
+    }
+
+  
+    public List<ProductInfo> searchProductsByUserAndName(String userId, String searchTerm) {
+        return productInfoRepository.findByUserIdAndProductNameContaining(userId, searchTerm);
+    }
+
     public ResponseEntity<?> saveProduct(ProductInfo product)  {  
          if (productInfoRepository.findByProductName(product.getProductName()) != null) {
             // Product with the same name already exists, return a conflict response
@@ -40,10 +91,10 @@ public class ProductInfoService {
         return ResponseEntity.ok().body(product);
     }
 
-    public List<ProductInfo> searchProducts(String searchTerm) {
-        // Search by product name or ingredient name
-        return productInfoRepository.findByProductNameContainingIgnoreCase(searchTerm);
-    }
+    // public List<ProductInfo> searchProducts(String searchTerm) {
+    //     // Search by product name or ingredient name
+    //     return productInfoRepository.findByProductNameContainingIgnoreCase(searchTerm);
+    // }
     
    
 
@@ -61,34 +112,35 @@ public class ProductInfoService {
     }
 
  
-    public List<ProductInfo> getProductsSortedByScore(String searchTerm) {
-        List<ProductInfo> allProducts =  productInfoRepository.findByProductNameContainingIgnoreCase(searchTerm);
-        return allProducts.stream()
-                .sorted(Comparator.comparing(ProductInfo::getOverallScore).reversed())
-                .collect(Collectors.toList());
-    }
+    // public List<ProductInfo> getProductsSortedByScore(String searchTerm) {
+    //     List<ProductInfo> allProducts =  productInfoRepository.findByProductNameContainingIgnoreCase(searchTerm);
+    //     return allProducts.stream()
+    //             .sorted(Comparator.comparing(ProductInfo::getOverallScore).reversed())
+    //             .collect(Collectors.toList());
+    // }
 
-    public List<ProductInfo> searchProductsSortedByName(String searchTerm) {
-       List<ProductInfo> productInfos = searchProducts(searchTerm);
-      return productInfos.stream()
-       .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER))
-               .collect(Collectors.toList());
+    // public List<ProductInfo> searchProductsSortedByName(String searchTerm) {
+    //    List<ProductInfo> productInfos = searchProducts(searchTerm);
+    //   return productInfos.stream()
+    //    .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER))
+    //            .collect(Collectors.toList());
       
-    }
+    // }
 
     
-    public List<ProductInfo> searchAllProductsSortedByNameDescending() {
-        List<ProductInfo> productInfos = productInfoRepository.findAll();
+    public List<ProductInfo> searchAllProductsSortedByNameAndUserAsc(String id) {
+        System.out.println("sorting all products by name in ascending ...");
+        List<ProductInfo> productInfos = productInfoRepository.findByUserId(id);
        return productInfos.stream()
-        .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER).reversed())
+        .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER))
                 .collect(Collectors.toList());
        
      }
 
 
-    public List<ProductInfo> searchAllProductsSortedByScore() {
-        System.out.println("sorting names all...");
-        List<ProductInfo> products = productInfoRepository.findAll(); // Fetch all products
+    public List<ProductInfo> searchAllProductsSortedByScoreAndUserDes(String id) {
+        System.out.println("all products sorting by score descending order !");
+        List<ProductInfo> products = productInfoRepository.findByUserId(id); // Fetch all products
         // Sort the list by name
         return products.stream()
                 .sorted(Comparator.comparing(ProductInfo::getOverallScore).reversed())
@@ -96,9 +148,9 @@ public class ProductInfoService {
        
     }
 
-    public List<ProductInfo> searchAllProductsSortedByScoreAscending() {
-        System.out.println("sorting names all...");
-        List<ProductInfo> products = productInfoRepository.findAll(); // Fetch all products
+    public List<ProductInfo> searchAllProductsSortedByScoreAndUserAsc(String id) {
+        System.out.println("sorting all products based on names ascending order...");
+        List<ProductInfo> products = productInfoRepository.findByUserId(id); // Fetch all products
         // Sort the list by name
         return products.stream()
                 .sorted(Comparator.comparing(ProductInfo::getOverallScore))
@@ -108,12 +160,12 @@ public class ProductInfoService {
 
 
     
-    public List<ProductInfo> searchAllProductsSortedByName() {
-        System.out.println("sorting scores all...");
-        List<ProductInfo> products = productInfoRepository.findAll(); // Fetch all products
+    public List<ProductInfo> searchAllProductsSortedByNameAndUserDes(String id) {
+        System.out.println("sorting all products by name in descending ...");
+        List<ProductInfo> products = productInfoRepository.findByUserId(id); // Fetch all products
         // Sort the list by name
         List<ProductInfo> sortedProducts = products.stream()
-        .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER))
+        .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER).reversed())
                 .collect(Collectors.toList());
         return sortedProducts;
     }
@@ -126,22 +178,22 @@ public class ProductInfoService {
         productInfoRepository.delete(existingProduct);
         return ResponseEntity.noContent().build();
     }
-    public List<ProductInfo> searchAllProductsSortedByScoreAscSearchTerm(String searchTerm) {
-        // TODO Auto-generated method stub
-        System.out.println("sorting scores ascending based on search term ...");
-        List<ProductInfo> products = searchProducts(searchTerm); // Fetch all products
-        // Sort the list by name
-        return products.stream()
-                .sorted(Comparator.comparing(ProductInfo::getOverallScore))
-                .collect(Collectors.toList());
-    }
-    public List<ProductInfo> searchAllProductsSortedByNameDesSearchTerm(String searchTerm) {
-        System.out.println("sorting names descending based on search term ...");
-        List<ProductInfo> productInfos = searchProducts(searchTerm);
-        return productInfos.stream()
-         .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER).reversed())
-                 .collect(Collectors.toList());
-    }
+    // public List<ProductInfo> searchAllProductsSortedByScoreAscSearchTerm(String searchTerm) {
+    //     // TODO Auto-generated method stub
+    //     System.out.println("sorting scores ascending based on search term ...");
+    //     List<ProductInfo> products = searchProducts(searchTerm); // Fetch all products
+    //     // Sort the list by name
+    //     return products.stream()
+    //             .sorted(Comparator.comparing(ProductInfo::getOverallScore))
+    //             .collect(Collectors.toList());
+    // }
+    // public List<ProductInfo> searchAllProductsSortedByNameDesSearchTerm(String searchTerm) {
+    //     System.out.println("sorting names descending based on search term ...");
+    //     List<ProductInfo> productInfos = searchProducts(searchTerm);
+    //     return productInfos.stream()
+    //      .sorted(Comparator.comparing(ProductInfo::getProductName, String.CASE_INSENSITIVE_ORDER).reversed())
+    //              .collect(Collectors.toList());
+    // }
   
 
    

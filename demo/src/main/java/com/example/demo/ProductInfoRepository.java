@@ -11,9 +11,15 @@ public interface ProductInfoRepository extends MongoRepository<ProductInfo, Stri
 
     ProductInfo findByProductName(String productName);
     List<ProductInfo> findAll(); 
- 
+    List<ProductInfo> findByUserIdAndProductNameContaining(String userId, String searchTerm);
     List<ProductInfo> findByProductNameContainingIgnoreCase(String name);
     List<ProductInfo> findByProductNameContainingIgnoreCaseOrderByProductName(String name);
+    List<ProductInfo> findByUserId(String userId);
+    List<ProductInfo> findByProductNameAndUserId(String productName, String userId);
+
+    List<ProductInfo> findByOverallScoreAndUserId(String score, String userId);
+
+   
 
     // Other methods if needed
 }
