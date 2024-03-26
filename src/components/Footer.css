@@ -1,0 +1,75 @@
+/* General styles for larger screens */
+
+footer {
+ position: relative;
+  bottom: 0; /* Align footer to the bottom of the viewport */
+  background-color: #333;
+  left: 0; /* Align footer to the left of the viewport */
+ /* Make the footer span the entire width of the viewport */
+  color: #fff;
+  padding: 20px;
+}
+
+.heart-icon {
+  font-size: 24px;
+  color: #7BECDC;
+}
+
+.all-rights {
+  float: left;
+  font-size: 18px;
+}
+
+.heart-icon:hover {
+  transform: translateY(-8px);
+}
+
+.social-icons {
+  margin: 10px;
+  margin-left:0px;
+  
+}
+
+.social-icon {
+
+  margin-left:12px;
+
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.made-with-love {
+  float: right;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  transform: translateY(-10px);
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .footer-components {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .all-rights,
+  .made-with-love {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    margin: 10px auto;
+    display: flex; /* Use flexbox */
+  justify-content: center; /* Center items horizontally */
+  }
+
+  .social-icon {
+    margin: 0 10px;
+
+  }
+}

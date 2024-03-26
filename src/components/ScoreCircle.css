@@ -1,0 +1,28 @@
+/* ScoreCircle.css */
+
+.big {
+    width: 120px;
+    height: 120px;
+    border-radius: 20% 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  
+  .small {
+    width: 40px;
+    height: 40px;
+    border-radius: 20% 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right:15px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+  }

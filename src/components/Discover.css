@@ -1,0 +1,44 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.chemical-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 green;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.card-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-score img{
+
+
+}
+
+

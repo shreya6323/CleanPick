@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'Porcelain';
+  src: url('../../public/fonts/Porcelain.otf') format('opentype');
+ 
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+   .login-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: solid 2px white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .login-button:hover {
+    transform: translateY(-5px);
+   border:none;
+    color: white;
+   
+  }
+  
+.logo {
+
+  font-size: 35px; 
+  color:   #7BECDC;
+ 
+ }
+
+ .logo-second{
+  font-size: 35px;
+  font-family: 'Open Sans', sans-serif;
+  color:  #FF667D;
+ }
+
+.navbar {
+   background-color:  #333 ;
+  border-radius:0px 0px 15px 15px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  max-width: 1500px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+}
+
+
+.nav-item {
+  height: 30px;
+}
+
+
+
+
+
+
+  .nav-links {
+    color: #fff;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    height: 100%;
+    position: relative; 
+  }
+  
+ .nav-links:hover{
+  transform: translateY(-5px);
+ }
+  
+ 
+
+ 
+
+.fa-bars {
+  color: white;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+
+  }
+
+
+  .nav-item{
+    margin:5px;
+  }
+  .nav-menu {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 50px;
+    left:-150%;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    
+    background-color:  #333;
+    left: 80vw;
+    font-size: 25px;
+  /* background-color: black; */
+   padding: 30px;
+   height:40vh;
+    /* Translate back by half of the menu width to center it */
+    transform: translateX(-70%);
+    /* Additional styles for smaller screens */
+    width: 80%; /* Adjust width as needed for smaller screens */
+    max-width: 200px; /* Limit the maximum width */
+    /* Other styles specific to smaller screens */
+  }
+ 
+ 
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  
+
+
+  
+}
