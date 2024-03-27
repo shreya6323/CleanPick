@@ -104,6 +104,7 @@
 .ingredient-info {
   display: flex;
   align-items: center;
+
 }
 
 .ingredient-info strong {
@@ -127,5 +128,31 @@
 
 
 
+/* Add these styles to your ImageUploader.css file */
+
+.ingredient-card {
+  background-color: transparent;
+  transition: transform 0.3s ease-in-out; 
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px; /* Add some margin between ingredient cards */
+  width: 400px; /* Default width */
+}
+
+/* Adjust width for tablets */
+@media screen and (max-width: 768px) {
+  .ingredient-card {
+    width: 300px; /* Adjust width for tablets */
+  }
+}
+
+/* Adjust width for phones */
+@media screen and (max-width: 480px) {
+  .ingredient-card {
+    width: 250px; /* Adjust width for phones */
+  }
+}
+
+/* Other styles remain the same */
 
 

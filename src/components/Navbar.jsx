@@ -21,9 +21,18 @@ function Navbar() {
             setIsAuthenticated(true);
         }
     }, []);
-
-    // Use useEffect to listen for window resize events
     useEffect(() => {
+        // Function to set initial click state based on window width
+        const setInitialClickState = () => {
+            if (window.innerWidth <= 960) {
+                setClick(true); // Set click state to true if window width is less than or equal to 960 pixels
+            }
+        };
+    
+        // Call the function to set initial click state when the component mounts
+        setInitialClickState();
+    
+        // Function to handle resizing
         const handleResize = () => {
             // Close the menu when the screen size increases
             if (click && window.innerWidth > 960) {
@@ -31,18 +40,34 @@ function Navbar() {
             }
         };
     
-    
-    
-    
-      // Call the checkAuthentication function when the component mounts
-    
+        // Add event listener for window resize
         window.addEventListener('resize', handleResize);
     
         // Clean up the event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [click]); // Include click in the dependency array to trigger useEffect when click changes
+    }, []); // Empty dependency array ensures that the effect runs only once when the component mounts
+    
+    // Use useEffect to listen for window resize events
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         // Close the menu when the screen size increases
+    //         if (click && window.innerWidth > 960) {
+    //             setClick(false);
+    //         }
+    //     };
+
+    
+    //   // Call the checkAuthentication function when the component mounts
+    
+    //     window.addEventListener('resize', handleResize);
+    
+    //     // Clean up the event listener on component unmount
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     };
+    // }, [click]); // Include click in the dependency array to trigger useEffect when click changes
     
     const handleSignOut = () => {
         // Remove the JWT token from local storage
@@ -84,11 +109,11 @@ function Navbar() {
                         </Link>
                     </li>
 
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                   {/* <li className='nav-item'> */}
+                        {/* <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                             Discover
                         </Link>
-                    </li>
+                    </li> */}
 
                  {isAuthenticated  && <li className='nav-item'>
                         <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
@@ -97,11 +122,11 @@ function Navbar() {
                     </li>}
 
 
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                             Contact
                         </Link>
-                    </li>
+                    </li> */}
 
 
                     {/* Additional menu items */}
@@ -124,3 +149,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+

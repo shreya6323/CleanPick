@@ -4,7 +4,7 @@ import { useState } from 'react';
  import House from './components/House';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Discover from './components/Discover';
+
 import ModalForm from './components/ModalForm';
 import ProductList from './components/ProductList';
 import Auth from './components/Auth';

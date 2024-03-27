@@ -18,7 +18,7 @@
 .wrapper {
   width: 320px;
   /* background: transparent; */
- 
+  margin:20px;
   padding: 20px 35px;
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.2);

@@ -141,7 +141,7 @@
 
 // export default ImageUploader;
 import React, { useState, useRef, useEffect } from 'react';
-
+import ScrollToTopButton from './ScrollToTopButton';
 import './ImageUploader.css'; // Import your CSS file for styling
 import Loader from './Loader'; // Import your Loader component
 import ScoreCircle from './ScoreCircle';
@@ -303,7 +303,7 @@ useEffect(() => {
       <button onClick={handleClick} className="custom-file-upload">
         Choose Image
       </button>
-
+      <ScrollToTopButton scrollThreshold={1000}/>
       {/* Your custom button or trigger */}
       {selectedImage ? (
         <div className="preview-container">

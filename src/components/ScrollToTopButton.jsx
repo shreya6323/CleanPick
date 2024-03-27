@@ -13,7 +13,7 @@ function ScrollToTopButton({ scrollThreshold }) {
 
   // Event listener to check if the user has scrolled down to a certain point to show the button
   const handleScroll = () => {
-    if (window.pageYOffset > scrollThreshold) {
+    if (window.scrollY > scrollThreshold) {
       setShowButton(true);
     } else {
       setShowButton(false);
@@ -29,6 +29,7 @@ function ScrollToTopButton({ scrollThreshold }) {
   return (
     <>
       {/* Button to navigate to the top */}
+    
       {showButton && (
         <button className="scroll-to-top-button" onClick={scrollToTop}>
          <i class="fas fa-arrow-up"></i>

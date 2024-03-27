@@ -1,4 +1,4 @@
-/* ProductList.css */
+ProductList.css
 
 .product-list-container {
     max-width: 800px;
@@ -7,7 +7,7 @@
   }
   
   .product-card {
-
+ margin:20px;
     padding: 20px;
     margin-bottom: 20px;
   }

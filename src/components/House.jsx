@@ -10,7 +10,7 @@ function House() {
   return (
    <>
 
-        <SearchBar />
+        {/* <SearchBar /> */}
         
         <ImageUploader />
         <ScrollToTopButton scrollThreshold={1000} /> 
