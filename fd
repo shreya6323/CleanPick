@@ -1,0 +1,60 @@
+[33mcommit 6745f3c3bfc7eed5018fe53b70adca1167f79817[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 9228677 5869b40
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Wed Mar 20 16:37:51 2024 +0530
+
+    Merge branch 'main' of https://github.com/shreya6323/CleanPick
+
+[33mcommit 9228677b118ef30be71e15b2b54a2ffd22b9ced3[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Wed Mar 20 16:36:17 2024 +0530
+
+    Added text recognition from image
+
+[33mcommit 599a524651a3c85fd19ac363212f5af46659b15d[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Wed Mar 20 16:34:51 2024 +0530
+
+    Added text recognition from image
+
+[33mcommit 5126c095024921daef3634164ec7801d7295d960[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Tue Feb 20 14:00:00 2024 +0100
+
+    Added Webscrapping functionality in the backend
+
+[33mcommit 5869b40914fc1614c7f67d33678e03ddd13d312c[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Tue Feb 20 14:00:00 2024 +0100
+
+    Added Webscrapping functionality in the backend
+
+[33mcommit 03325efbc216f8f0882c9df6dabe217725f908e2[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Tue Feb 20 14:00:00 2024 +0100
+
+    Added Webscrapping functionality in the backend
+
+[33mcommit 47e88d9152f992fccf26b2c4d010da10af36393e[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Fri Feb 20 14:00:00 2037 +0100
+
+    Added Webscrapping functionality in the backend
+
+[33mcommit 49fa316b1b926baeefc92a1a6b1729e71f1a9d76[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Fri Mar 15 08:49:44 2024 +0530
+
+    Added Webscrapping functionality in the backend
+
+[33mcommit 70f30124b4be3fb6cf08385f63c6aa1bbb1c32b0[m[33m ([m[1;31morigin/second[m[33m)[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Fri Mar 1 10:54:35 2024 +0530
+
+    second
+
+[33mcommit 60257ed922586653b32a41b9e1321ca1e3f14b06[m
+Author: sshreya gandhi <gandhishreya311@gmail.com>
+Date:   Sun Feb 25 21:00:21 2024 +0530
+
+    first

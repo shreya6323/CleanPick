@@ -1,0 +1,48 @@
+/* Default styles */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 4px;
+  background-color: transparent;
+  border: 2px solid #7BECDC;
+  border-radius: 4px;
+  color: #A9A9A9;
+  outline: none;
+}
+
+input:focus {
+  background-color: transparent;
+  border: 2px solid #7BECDC;
+  border-radius: 4px;
+  color: #A9A9A9;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for tablets */
+  .search-bar-container {
+    margin: 10px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust styles for phones */
+  input {
+    font-size: 12px;
+  }
+}

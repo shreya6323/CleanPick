@@ -1,9 +1,9 @@
 package com.example.demo;
 import org.springframework.web.bind.annotation.*;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.security.Keys;
+// import io.jsonwebtoken.Claims;
+// import io.jsonwebtoken.Jwts;
+// import io.jsonwebtoken.SignatureAlgorithm;
+// import io.jsonwebtoken.security.Keys;
 import java.util.List;
 import java.util.Map;
 import javax.crypto.SecretKey;
@@ -54,12 +54,15 @@ public class ProductInfoController {
     // @RequestMapping("/api/products/{username}")
     @PostMapping
     public ResponseEntity<?> saveProduct(@RequestBody ProductInfo product) {
-  
+   
         String id = getLoggedInUser();
         System.out.println(id);
+      
         User user = userService.findById(id); // Replace userService with your user service
+        System.out.println(user.getUsername());
         if (user != null) {
             product.setUser(user);
+           System.out.println("hi");
             return new ResponseEntity<>(productService.saveProduct(product), HttpStatus.CREATED);
         }
     
@@ -246,11 +249,6 @@ public class ProductInfoController {
     //     }
     //     return ResponseEntity.ok(searchResults);
     // }
-    
- 
-
-
-
 @GetMapping("/search")
 public ResponseEntity<List<ProductInfo>> searchProducts() {
 String id = getLoggedInUser();

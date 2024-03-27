@@ -1,0 +1,23 @@
+.card-container {
+  
+     /* Box shadow */
+    margin-bottom: 20px; /* Bottom margin */
+  }
+
+   .card-container .name{
+    margin-top: 0px;
+    font-size:30px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .card-container .score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+  }
+  
