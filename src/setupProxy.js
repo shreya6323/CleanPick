@@ -20,7 +20,7 @@ module.exports = function(app) {
         '/api',
         (req, res) => {
             // Replace 'https://clean-pick.vercel.app' with your actual Vercel deployment URL
-            const targetUrl = 'https://clean-pick.vercel.app'; 
+            const targetUrl = 'https://clean-pick-o32sb6yzv-shreya6323s-projects.vercel.app/'; 
             req.pipe(request({ url: targetUrl + req.url })).pipe(res);
         }
     );
