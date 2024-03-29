@@ -11,7 +11,7 @@ const success = (success_msg) => toast.success(success_msg);
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch('api/login', {
+    const response = await fetch('http://localhost:8080/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ const handleSubmit = async (e) => {
     });
     if(response.ok)
     {
-
+ console.log("hello i am in successful authentication !!");
       const token = response.headers.get('Authorization').split(' ')[1]; // Extract token from header
       console.log(token);
       localStorage.setItem('token', token); // Store token in local storage

@@ -66,12 +66,12 @@ public class UserController {
             //         new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 
             // SecurityContextHolder.getContext().setAuthentication(authentication);
-
+                 System.out.println("I am in logged in ");
             User save = userRepository.findByUsername(user.getUsername())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
             String token = save.getId();
-
+ System.out.println(token);
             return ResponseEntity.ok().header("Authorization", "Bearer " + token).body("Login successful !");
         } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password !");
