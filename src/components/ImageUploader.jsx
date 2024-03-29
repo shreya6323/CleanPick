@@ -209,7 +209,7 @@ useEffect(() => {
       try {
         const formData = new FormData();
         formData.append('image', fileInputRef.current.files[0]); // Append the selected file with the key 'image'
-        const response = await fetch('api/performWebScraping', {
+        const response = await fetch('http://localhost:8080/api/performWebScraping', {
           method: 'POST',
           body: formData
         });
