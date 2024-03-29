@@ -75,6 +75,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 
 @RestController
 public class WebScrapingController {
@@ -84,6 +86,10 @@ public class WebScrapingController {
  @Autowired
     public WebScrapingController(Scraper scraper) {
         this.scraper = scraper;
+    }
+
+    public String requestMethodName(@RequestParam String param) {
+        return new String();
     }
 
     @RequestMapping("/api/performWebScraping")
