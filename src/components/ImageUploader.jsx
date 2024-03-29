@@ -209,7 +209,7 @@ useEffect(() => {
       try {
         const formData = new FormData();
         formData.append('image', fileInputRef.current.files[0]); // Append the selected file with the key 'image'
-        const response = await fetch('api/performWebScraping', {
+        const response = await fetch('http://localhost:8080/api/performWebScraping', {
           method: 'POST',
           body: formData
         });
@@ -241,7 +241,7 @@ useEffect(() => {
 
   const sendToken = async () => {
     try {
-      let url = '/api/products/search/token';
+      let url = 'http://localhost:8080/api/products/search/token';
       console.log(url);
       const storedToken = localStorage.getItem('token');
       console.log(storedToken);
@@ -265,7 +265,7 @@ useEffect(() => {
   const saveProductData = async (Name) => {
     try {
       await sendToken();
-      const response = await fetch('/api/products', {
+      const response = await fetch('http://localhost:8080/api/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

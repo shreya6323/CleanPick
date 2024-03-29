@@ -18,7 +18,7 @@ function Auth() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('api/register', {
+      const response = await fetch('http://localhost:8080/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
