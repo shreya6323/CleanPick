@@ -32,7 +32,7 @@ const ProductList = () => {
   useEffect(() => {
     const sendToken = async () => {
       try {
-        let url = '/api/products/search/token';
+        let url = 'http://localhost:8080/api/products/search/token';
         console.log(url);
         const storedToken = localStorage.getItem('token');
         console.log(storedToken);
@@ -55,7 +55,7 @@ const ProductList = () => {
   
     const fetchProducts = async () => {
       try {
-        let url = '/api/products/search';
+        let url = 'http://localhost:8080/api/products/search';
         if (searchTerm) {
           url += `/${searchTerm}`;
         }
@@ -96,7 +96,7 @@ const ProductList = () => {
 
   const handleDeleteProduct = async (productId) => {
     try {
-      const response = await fetch(`/api/products/${productId}`, {
+      const response = await fetch(`http://localhost:8080/api/products/${productId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -115,7 +115,7 @@ const ProductList = () => {
 
   const handleUpdateProduct = async (productId, updatedProductData) => {
     try {
-      const response = await fetch(`/api/products/${productId}`, {
+      const response = await fetch(`http://localhost:8080/api/products/${productId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
