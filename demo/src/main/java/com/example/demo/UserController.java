@@ -26,7 +26,7 @@ public class UserController {
     @Autowired
     private final UserRepository userRepository;
     @SuppressWarnings("rawtypes")
-    @PostMapping("/api/register")
+    @RequestMapping("/api/register")
     public ResponseEntity registerUser(@RequestBody User user){
 
         try {
@@ -50,7 +50,7 @@ public class UserController {
             User save = userRepository.save(user);
             String token = save.getId();//need to encode it
             System.out.println(token);// Generate JWT token
-            return ResponseEntity.ok().header("Authorization", "Bearer " + token).body("User registered successfully");
+            return ResponseEntity.ok().body("{\"token\": \"" + token + "\"}");
         } catch (Exception e){
             System.out.println(e);
             return ResponseEntity.internalServerError().body(e.getMessage());
@@ -59,7 +59,7 @@ public class UserController {
 
 
 
-     @PostMapping("/api/login")
+     @RequestMapping("/api/login")
     public ResponseEntity<?> login(@RequestBody User user) {
         try {
             // Authentication authentication = authenticationManager.authenticate(
@@ -72,7 +72,7 @@ public class UserController {
 
             String token = save.getId();
  System.out.println(token);
-            return ResponseEntity.ok().header("Authorization", "Bearer " + token).body("Login successful !");
+ return ResponseEntity.ok().body("{\"token\": \"" + token + "\"}");
         } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password !");
         }

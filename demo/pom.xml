@@ -18,52 +18,29 @@
 	</properties>
 	<dependencies>
 
-<!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
 
-
-
-	<!-- <dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-api</artifactId>
-    <version>0.11.2</version>
-</dependency>
- <dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-impl</artifactId>
-    <version>0.11.2</version>
-    <scope>runtime</scope>
-</dependency>  -->
-<!-- <dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-jackson</artifactId>
-    <version>0.11.2</version>
-    <scope>runtime</scope>
-</dependency>  -->
 <dependency>
     <groupId>org.mindrot</groupId>
     <artifactId>jbcrypt</artifactId>
     <version>0.4</version>
 </dependency>
-   <!-- <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>  -->
+ 
 
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
-    <version>1.18.22</version> <!-- Replace with the latest version -->
+    <version>1.18.22</version> 
     <scope>provided</scope>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+
 <dependency>
     <groupId>net.sourceforge.tess4j</groupId>
     <artifactId>tess4j</artifactId>
     <version>5.8.0</version>
 </dependency>
 <dependencies>
-    <!-- Auth0 Java JWT -->
+  
 <dependency>
   <groupId>com.auth0</groupId>
   <artifactId>java-jwt</artifactId>
@@ -77,12 +54,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-<!-- 
-		<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-api</artifactId>
-    <version>0.11.2</version>
-</dependency> -->
 
 
         <dependency>
