@@ -103,7 +103,7 @@ public class WebScrapingController {
             imageFile.transferTo(tempFile);
 
             ITesseract tesseract = new Tesseract();
-            tesseract.setDatapath("../Tesseract-OCR/tessdata");
+             tesseract.setDatapath("C:\\Users\\shreya gandhi\\Downloads\\CleanPick-main\\CleanPick-main\\demo\\Tesseract-OCR\\tessdata");
             String result = tesseract.doOCR(tempFile);
             String[] ingredientsArray = result.split(",|and|\\(and\\)|&");
           
