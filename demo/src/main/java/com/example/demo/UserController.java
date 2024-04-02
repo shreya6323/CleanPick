@@ -50,6 +50,7 @@ public class UserController {
             User save = userRepository.save(user);
             String token = save.getId();//need to encode it
             System.out.println(token);// Generate JWT token
+           // return ResponseEntity.ok().header("Authorization", "Bearer " + token).body("Regsitration successful !");
             return ResponseEntity.ok().body("{\"token\": \"" + token + "\"}");
         } catch (Exception e){
             System.out.println(e);
@@ -72,6 +73,8 @@ public class UserController {
 
             String token = save.getId();
  System.out.println(token);
+        //  return ResponseEntity.ok().header("Authorization", "Bearer " + token).body("Login successful !");
+         System.out.println("sending token in body ");
  return ResponseEntity.ok().body("{\"token\": \"" + token + "\"}");
         } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password !");
