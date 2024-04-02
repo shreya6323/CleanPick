@@ -80,7 +80,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @RestController
-@CrossOrigin(origins = "https://clean-pick.vercel.app")
+
+@CrossOrigin(origins = {"http://localhost:3000", "https://clean-pick.vercel.app"})
 public class WebScrapingController {
 
    private Scraper scraper;
@@ -102,7 +103,7 @@ public class WebScrapingController {
             imageFile.transferTo(tempFile);
 
             ITesseract tesseract = new Tesseract();
-            tesseract.setDatapath("E:\\Tesseract-OCR\\tessdata");
+            tesseract.setDatapath("../Tesseract-OCR/tessdata");
             String result = tesseract.doOCR(tempFile);
             String[] ingredientsArray = result.split(",|and|\\(and\\)|&");
           
