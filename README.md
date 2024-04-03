@@ -48,4 +48,4 @@ Contributions to CleanPick are welcome! If you have ideas for new features, impr
 
 CleanPick is provided for educational and informational purposes only. It is not intended to substitute professional advice or medical recommendations. Users should consult with experts or professionals for ingredient safety assessments and decisions.
 
-## 🌍 Explore More
+
