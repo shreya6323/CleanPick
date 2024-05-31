@@ -1,6 +1,6 @@
 # CleanPick (WebApp) 🌱
 
-🔗 [**Explore CleanPick**](https://vimeo.com/930008560)
+🔗 [**Demo**](https://vimeo.com/930008560)
 
 CleanPick is a revolutionary web application designed to revolutionize the way users assess the safety of ingredients in their everyday products. With an increasing awareness of the potential health risks associated with certain chemicals and substances, it's crucial for consumers to have access to reliable tools that enable them to make informed decisions about the products they use.
 
